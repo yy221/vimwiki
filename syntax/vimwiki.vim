@@ -9,6 +9,19 @@ if version < 600
 elseif exists("b:current_syntax")
   finish
 endif
+
+" chliu added for hight my toto list
+syn match   cUndone "^TODO:"
+syn match   cFixme  "^FIXME:"
+syn match   cDone   "^DONE:.*"
+"syn match   cDate   "^#.*\d\d[-/]\d\d.*"
+
+"hi def link cTask		Comment
+hi def link cUndone		Error
+hi def link cFixme		Todo
+hi def link cDone		Type
+"hi def link cDate		Statement
+
 "TODO do nothing if ...? (?)
 let starttime = reltime()  " start the clock
 if VimwikiGet('maxhi')
