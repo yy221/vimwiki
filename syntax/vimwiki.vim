@@ -8,19 +8,7 @@ if version < 600
   syntax clear
 elseif exists("b:current_syntax")
   finish
-endif
-
-" chliu added for hight my toto list
-syn match   cUndone "^TODO:"
-syn match   cFixme  "^FIXME:"
-syn match   cDone   "^DONE:.*"
-"syn match   cDate   "^#.*\d\d[-/]\d\d.*"
-
-"hi def link cTask		Comment
-hi def link cUndone		Error
-hi def link cFixme		Todo
-hi def link cDone		Type
-"hi def link cDate		Statement
+endif 
 
 "TODO do nothing if ...? (?)
 let starttime = reltime()  " start the clock
@@ -600,6 +588,18 @@ hi def link VimwikiCodeCharT VimwikiMarkers
 hi def link VimwikiHeaderCharT VimwikiMarkers
 hi def link VimwikiLinkCharT VimwikiLinkT
 hi def link VimwikiNoExistsLinkCharT VimwikiNoExistsLinkT
+
+" chliu added for hight my toto list
+"rrggbb
+hi my_Todo	guifg=#ff0000 
+hi my_Done	guifg=#00ff00 
+hi my_Date	guifg=#0000ff  
+syntax match   cUndone "^todo:"
+syntax match   cDone   "^done:.*"
+syntax match   cDate   "\d\d[-/]\d\d" 
+hi def link cUndone		my_Todo
+hi def link cDone		  Type
+hi def link cDate		  my_Date
 "}}}
 
 " -------------------------------------------------------------------------
