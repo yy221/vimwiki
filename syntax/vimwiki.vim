@@ -580,16 +580,10 @@ hi def link VimwikiLinkCharT VimwikiLinkT
 hi def link VimwikiNoExistsLinkCharT VimwikiNoExistsLinkT
 
 "for highlight toto list
-"rrggbb
-hi my_Todo	guifg=#ff0000 
-hi my_Done	guifg=#00ff00 
-hi my_Date	guifg=#0000ff  
 syntax match   cUndone "^todo:"
 syntax match   cDone   "^done:.*"
-syntax match   cDate   "\d\d[-/]\d\d" 
-hi def link cUndone		my_Todo
+hi def link cUndone		Error
 hi def link cDone		  Type
-hi def link cDate		  my_Date
 "}}}
 
 " Load syntax-specific functionality
