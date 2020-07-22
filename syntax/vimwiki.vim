@@ -580,9 +580,13 @@ hi def link VimwikiLinkCharT VimwikiLinkT
 hi def link VimwikiNoExistsLinkCharT VimwikiNoExistsLinkT
 
 "for highlight toto list
-syntax match   cUndone "^todo:"
+syntax match   cUndone "^todo:p1:"
+syntax match   cUndone2 "^todo:p2:"
+syntax match   cUndone3 "^todo:p3:"
 syntax match   cDone   "^done:.*"
 hi def link cUndone		Error
+hi def link cUndone2	Statement
+hi def link cUndone3	Constant
 hi def link cDone		  Type
 "}}}
 
