@@ -580,9 +580,9 @@ hi def link VimwikiLinkCharT VimwikiLinkT
 hi def link VimwikiNoExistsLinkCharT VimwikiNoExistsLinkT
 
 "for highlight toto list
-syntax match   cUndone "^todo:p3:\d\+[ap]m:"
-syntax match   cUndone2 "^todo:p2:\d\+[ap]m:"
-syntax match   cUndone3 "^todo:p1:\d\+[ap]m:"
+syntax match   cUndone "^todo:p3:\d\+\(\.\d\+\)*[ap]m:"
+syntax match   cUndone2 "^todo:p2:\d\+\(\.\d\+\)*[ap]m:"
+syntax match   cUndone3 "^todo:p1:\d\+\(\.\d\+\)*[ap]m:"
 syntax match   cDoing   "^doing:.*"
 syntax match   cDone   "^done:.*"
 hi def link cUndone		Error
