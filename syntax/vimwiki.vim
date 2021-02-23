@@ -583,13 +583,15 @@ hi def link VimwikiNoExistsLinkCharT VimwikiNoExistsLinkT
 syntax match   cUndone "^todo:p3:\d\+\(\.\d\+\)*[ap]m:"
 syntax match   cUndone2 "^todo:p2:\d\+\(\.\d\+\)*[ap]m:"
 syntax match   cUndone3 "^todo:p1:\d\+\(\.\d\+\)*[ap]m:"
-syntax match   cDoing   "^doing:.*"
+syntax match   cOngoing   "^ongoing:.*"
 syntax match   cDone   "^done:.*"
+syntax match   cPend   "^pend:.*"
 hi def link cUndone		Error
 hi def link cUndone2	Statement
 hi def link cUndone3	Constant
-hi def link cDoing		Todo
+hi def link cOngoing		Todo
 hi def link cDone		  Type
+hi def link cPend		  Comment
 "}}}
 
 " Load syntax-specific functionality
